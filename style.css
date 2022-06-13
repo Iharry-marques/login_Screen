@@ -20,10 +20,15 @@
     --red: #CF3C3F;
   }
 
+  main{
+    display: flex;
+  }
+
   .login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 500px;
     min-width: 100vh;
@@ -78,6 +83,14 @@
   .login__label .span-active{
     font-size: 0.7em;
     margin: 8px 10px;
+  }
+
+  .wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .login__icons{
@@ -176,4 +189,22 @@
 
 .login__button:disabled svg {
   fill: var(--grey);
+}
+
+.login__link{
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--medium-grey);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 700;
+
+}
+
+.wallpaper{
+  width: 100%;
+  background-image: url('./images/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1;
 }

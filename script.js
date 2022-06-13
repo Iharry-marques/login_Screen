@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('.input');
+const button = document.querySelector('.login__button');
 
 const handleFocus = ({ target }) =>{
     const span = target.previousElementSibling;
@@ -9,6 +10,16 @@ const handleFocusOut = ({ target }) =>{
     if(target.value === ''){
         const span = target.previousElementSibling;
         span.classList.remove('span-active');
+    }
+}
+
+const handleChange = () => {
+    const [usarname, password] = inputs;
+
+    if(usarname.value && password.value.length >= 8){
+        button.removeAttribute('disabled');
+    } else {
+        button.setAttribute('disabled', '' );
     }
 }
 
